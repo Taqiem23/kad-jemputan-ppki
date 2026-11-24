@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#173d66">
+<title>Jemputan Rasmi | PPKI SMK Cheras Perdana</title>
+<style>
+:root{
+ --navy:#102f55;--blue:#174f88;--denim:#28649b;--sky:#dceeff;--pale:#f4f8fc;
+ --gold:#e9b83e;--gold2:#f8d77c;--ink:#193451;--muted:#657d96;--white:#fff;
+ --shadow:0 22px 65px rgba(16,47,85,.17);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--ink);font-family:Arial,Helvetica,sans-serif;
+ background:radial-gradient(circle at 15% 10%,#fff 0,#edf5fc 42%,#dce9f5 100%);overflow-x:hidden}
+button,a{font:inherit}
+.serif{font-family:Georgia,'Times New Roman',serif}
+.wrap{width:min(900px,100% - 28px);margin:auto;padding:18px 0 55px}
+.topline{text-align:center;font-size:10px;letter-spacing:3px;color:#597b9d;margin:8px 0 20px;font-weight:700}
+.card{position:relative;overflow:hidden;background:rgba(255,255,255,.94);border:1px solid rgba(40,100,155,.22);
+ border-radius:26px;box-shadow:var(--shadow)}
+.card:before{content:"";position:absolute;inset:9px;border:1px solid rgba(233,184,62,.75);border-radius:19px;pointer-events:none}
+.goldline{height:3px;width:74px;background:linear-gradient(90deg,var(--gold),#fff1b5,var(--gold));border-radius:8px;margin:17px auto}
+.kicker{font-size:11px;letter-spacing:2.5px;font-weight:800;color:var(--blue)}
+h1,h2,h3,p{margin-top:0}
+h1{font:normal clamp(34px,8vw,66px)/1.04 Georgia,serif;color:var(--navy);margin:14px 0 10px;text-shadow:0 2px 0 #e7eef6}
+h2{font:normal clamp(27px,6vw,39px)/1.1 Georgia,serif;color:var(--navy);text-align:center;margin:0 0 20px}
+.subtitle{font:italic 17px/1.55 Georgia,serif;color:#506e8d}
+.smallcaps{font-size:10px;letter-spacing:2px;font-weight:800;color:#6e87a0}
+.pill{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(110deg,#0e315b,#2569a8);color:white;
+ border:2px solid var(--gold);border-radius:999px;padding:10px 20px;font-size:12px;font-weight:800;letter-spacing:1px;
+ box-shadow:0 6px 16px #173d6633}
+.hero{min-height:640px;padding:44px 25px 36px;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;
+ background:
+ radial-gradient(ellipse at 50% 0%,#fff 0,rgba(255,255,255,.75) 45%,transparent 70%),
+ linear-gradient(150deg,#e9f3fc,#fff 52%,#d9e9f7)}
+.hero:after{content:"";position:absolute;left:0;right:0;bottom:0;height:35px;background:repeating-linear-gradient(135deg,#123b68 0 7px,#1d568b 7px 14px);
+ border-top:3px dashed var(--gold);opacity:.96}
+.logo-row{display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:17px;flex-wrap:wrap}
+.logo-placeholder{width:54px;height:54px;border-radius:50%;border:2px solid var(--gold);background:#fff;display:grid;place-items:center;
+ color:var(--navy);font: bold 10px Georgia,serif;box-shadow:0 4px 12px #173d6622}
+.school-ribbon{background:linear-gradient(90deg,#12345e,#1e5d9b,#12345e);border:2px solid var(--gold);border-radius:30px;
+ color:white;padding:10px 18px;font-weight:800;font-size:clamp(11px,3vw,15px);letter-spacing:.5px;box-shadow:0 5px 12px #12345e33}
+.invite-label{font:italic 31px Georgia,serif;color:#fff;text-shadow:2px 3px 0 #0c2e54,0 0 3px #0c2e54;
+ background:linear-gradient(110deg,#12345e,#2769a6,#12345e);padding:10px 28px;border:3px solid var(--gold);border-radius:48% 12% 45% 12%;
+ transform:rotate(-1deg);box-shadow:0 7px 0 #d3a12e;margin:8px 0 20px}
+.honour{font:italic 15px/1.55 Georgia,serif;color:#314d69;max-width:520px;margin:0 auto 12px}
+.event-title{font:normal clamp(31px,7.7vw,55px)/1.08 Georgia,serif;color:#123d70;margin:8px auto 4px;text-shadow:1px 2px 0 #c4d9ec}
+.event-title strong{display:block;color:#f1c526;-webkit-text-stroke:.8px #123d70;text-shadow:2px 3px 0 #123d70}
+.event-banner{background:linear-gradient(90deg,#0e315b,#27649c,#0e315b);border:2px solid var(--gold);color:#fff;border-radius:9px;
+ padding:9px 25px;margin:10px auto 14px;font:italic bold 22px Georgia,serif;transform:rotate(-1deg);box-shadow:0 5px 0 #d5a12d}
+.theme-chip{background:#fff;border:2px solid var(--gold);border-radius:30px;color:#164574;padding:8px 18px;font-weight:800;font-size:14px}
+.decor{position:absolute;pointer-events:none;font-size:clamp(30px,7vw,54px);filter:drop-shadow(0 5px 5px #173d6622)}
+.d1{left:4%;top:30%}.d2{right:4%;top:29%}.d3{left:6%;bottom:8%}.d4{right:6%;bottom:8%}
+.datebox{width:min(590px,100%);margin:22px auto 18px;padding:17px 18px;background:#fff;border:2px solid #f0c65e;border-radius:22px;
+ box-shadow:inset 0 0 0 4px #f5f8fb,0 8px 20px #173d6615;text-align:left}
+.date-row{display:grid;grid-template-columns:105px 1fr;gap:12px;align-items:center;padding:8px 3px;border-bottom:1px solid #d9e2ec}
+.date-row:last-child{border:0}
+.date-label{background:#174b82;color:white;border-radius:5px;padding:7px 9px;font-size:11px;font-weight:800;letter-spacing:.7px}
+.date-value{font: bold 17px Georgia,serif;color:#173b65}
+.section{padding:34px clamp(18px,5vw,48px);margin-top:20px}
+.section-intro{text-align:center;color:var(--muted);font:italic 15px/1.65 Georgia,serif;margin:-7px auto 22px;max-width:590px}
+.programme-date{text-align:center;color:#386b9b;font-weight:800;font-size:12px;letter-spacing:1px;margin-bottom:15px}
+.programme{max-width:670px;margin:0 auto}
+.programme-row{display:grid;grid-template-columns:43px 1fr;gap:13px;padding:9px 0;border-bottom:1px solid #e6edf4;align-items:start}
+.programme-row:last-child{border:0}
+.num{width:31px;height:31px;border-radius:50%;display:grid;place-items:center;background:#e7f0f8;border:1px solid #b9cde0;color:#1d568b;font-weight:800;font-size:12px}
+.programme-text{font-size:14px;line-height:1.5;color:#263f59;padding-top:5px}
+.closing-note{text-align:center;font:italic 15px/1.6 Georgia,serif;color:#54718e;margin:22px auto 14px;max-width:570px}
+.thanks{text-align:center;font-weight:800;letter-spacing:1px;color:#214d79;font-size:12px;margin:0}
+.action-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:560px;margin:25px auto 0}
+.action{display:flex;justify-content:center;align-items:center;text-decoration:none;text-align:center;padding:15px 14px;border-radius:999px;font-size:12px;font-weight:800;letter-spacing:.5px}
+.action.primary{background:linear-gradient(110deg,#12365f,#27669f);color:#fff;border:2px solid var(--gold)}
+.action.secondary{background:#fff;color:#174b82;border:2px solid #9db7cf}
+.footer{text-align:center;padding:24px 12px 6px;color:#6e8498;font-size:11px;line-height:1.8}
+#intro{min-height:calc(100svh - 75px);display:grid;place-items:center;text-align:center}
+.intro-inner{width:min(520px,100%);padding:25px 8px}
+.envelope-wrap{width:min(340px,82vw);height:235px;margin:26px auto 18px;position:relative;filter:drop-shadow(0 18px 20px #173d6630)}
+.envelope{position:absolute;inset:32px 0 0;background:#d7e6f2;border-radius:9px;overflow:visible}
+.env-back{position:absolute;inset:0;background:#c2d5e5;clip-path:polygon(0 0,100% 0,50% 72%)}
+.letter{position:absolute;left:8%;width:84%;height:158px;bottom:13px;background:#fff;border-radius:5px;z-index:1;
+ display:flex;align-items:center;justify-content:center;flex-direction:column;gap:9px;transition:transform 1s ease}
+.letter b{font:normal 23px Georgia,serif;color:var(--navy)}
+.letter small{font-size:9px;letter-spacing:2px;color:#718ba4}
+.env-front{position:absolute;inset:0;background:linear-gradient(145deg,#edf5fb,#c9dbea);clip-path:polygon(0 0,50% 57%,100% 0,100% 100%,0 100%);z-index:3}
+.env-flap{position:absolute;inset:0;background:linear-gradient(130deg,#9ebbd4,#dce9f4);clip-path:polygon(0 0,100% 0,50% 67%);
+ transform-origin:top;transition:transform .9s ease;z-index:4}
+.seal{position:absolute;z-index:5;left:50%;top:55%;transform:translate(-50%,-50%);width:52px;height:52px;border-radius:50%;
+ display:grid;place-items:center;background:#153d69;color:#f7d36c;border:3px solid #fff;font-size:21px}
+.envelope.open .env-flap{transform:rotateX(180deg);z-index:0}
+.envelope.open .letter{transform:translateY(-100px)}
+.open-btn{background:linear-gradient(110deg,#12365f,#27669f);color:white;border:2px solid var(--gold);border-radius:999px;
+ padding:14px 27px;font-weight:800;letter-spacing:1px;cursor:pointer;box-shadow:0 8px 20px #173d6633}
+#invitation{display:none;animation:appear .8s ease both}
+#invitation.visible{display:block}
+@keyframes appear{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+.music-btn{position:fixed;right:17px;bottom:17px;width:48px;height:48px;border:2px solid var(--gold);border-radius:50%;
+ background:#123b68;color:white;font-size:20px;box-shadow:var(--shadow);z-index:8;display:none;cursor:pointer}
+.music-btn.show{display:block}
+
+.elegant-footer{padding:34px 16px 18px;text-align:center;color:#71869b}
+.footer-ornament{font:14px Georgia,serif;letter-spacing:3px;color:#d8a936;margin-bottom:15px}
+.footer-message{font:italic 17px/1.6 Georgia,serif;color:#496783;margin:0 auto 15px}
+.footer-signoff{font:italic 14px Georgia,serif;margin:0 0 7px;color:#71869b}
+.footer-school{font-size:11px;letter-spacing:1.8px;font-weight:800;color:#173f6c;margin:0 0 15px}
+.footer-rsvp{display:inline-block;color:#1d568b;text-decoration:none;font-size:12px;font-weight:700;
+ border-bottom:1px solid #d9b24d;padding:5px 2px}
+.footer-year{font-size:9px;letter-spacing:2px;color:#8da0b2;margin-top:18px}
+
+@media(max-width:540px){
+ .hero{min-height:610px;padding:35px 17px 50px}
+ .date-row{grid-template-columns:92px 1fr;gap:9px}.date-value{font-size:15px}
+ .action-grid{grid-template-columns:1fr}
+ .d1{left:1%;top:35%}.d2{right:1%;top:35%}
+}
+
+/* ===== WHITE & DENIM PROFESSIONAL DECORATIVE FINISH ===== */
+body{
+ background-color:#e7eff6;
+ background-image:
+  radial-gradient(circle at 12% 16%,rgba(255,255,255,.95) 0 2px,transparent 3px),
+  radial-gradient(circle at 88% 82%,rgba(255,255,255,.75) 0 2px,transparent 3px),
+  linear-gradient(135deg,#edf4f9 0%,#dce8f1 48%,#f5f8fb 100%);
+ background-size:34px 34px,42px 42px,auto;
+}
+.card{
+ box-shadow:0 22px 58px rgba(24,57,86,.14),0 4px 12px rgba(24,57,86,.06);
+}
+.card:before{
+ border:1px solid rgba(198,168,106,.88);
+}
+.hero{
+ background:
+  radial-gradient(ellipse at 0% 0%,rgba(203,222,237,.45),transparent 35%),
+  radial-gradient(ellipse at 100% 100%,rgba(203,222,237,.45),transparent 34%),
+  linear-gradient(145deg,#fff 0%,#fbfdff 55%,#edf4f9 100%);
+}
+.hero:after{
+ content:"";
+ position:absolute;left:0;right:0;bottom:0;height:13px;
+ background:
+  repeating-linear-gradient(90deg,transparent 0 8px,rgba(255,255,255,.7) 8px 10px),
+  repeating-linear-gradient(135deg,#173f68 0 8px,#245987 8px 16px);
+ border-top:2px solid #d9b75f;
+ opacity:.96;
+}
+.school-ribbon{
+ position:relative;
+ box-shadow:0 7px 16px rgba(16,47,85,.2);
+}
+.school-ribbon:before,.school-ribbon:after{
+ content:"✦";color:#f3cf69;font-size:11px;margin:0 7px;
+}
+.invite-label{
+ position:relative;
+ box-shadow:0 7px 0 #d5a12d,0 12px 20px rgba(16,47,85,.16);
+}
+.invite-label:before,.invite-label:after{
+ content:"✧";position:absolute;top:50%;transform:translateY(-50%);
+ color:#f5d77d;font-size:21px;
+}
+.invite-label:before{left:13px}.invite-label:after{right:13px}
+.event-title{
+ position:relative;
+ text-shadow:0 2px 0 #dce8f1;
+}
+.event-banner{
+ position:relative;
+ border-style:double;
+ box-shadow:0 5px 0 #d5a12d,0 10px 18px rgba(16,47,85,.13);
+}
+.theme-chip{
+ box-shadow:0 4px 12px rgba(24,57,86,.08);
+}
+.datebox{
+ position:relative;
+ background:
+  repeating-linear-gradient(0deg,rgba(231,239,246,.22) 0 1px,transparent 1px 7px),
+  #fff;
+}
+.datebox:after{
+ content:"";
+ position:absolute;inset:7px;
+ border:1px dashed rgba(42,91,133,.26);
+ border-radius:15px;
+ pointer-events:none;
+}
+.section{
+ background:
+  radial-gradient(circle at 0 0,rgba(210,226,239,.3),transparent 26%),
+  linear-gradient(180deg,#fff,#fcfdff);
+}
+.section h2{
+ position:relative;
+}
+.section h2:after{
+ content:"";
+ display:block;width:74px;height:2px;margin:12px auto 0;
+ background:linear-gradient(90deg,transparent,#c6a86a,transparent);
+}
+.programme{
+ position:relative;
+}
+.programme:before{
+ content:"";
+ position:absolute;left:15px;top:0;bottom:0;width:1px;
+ background:linear-gradient(#b8ccdc,#e8eff4,#b8ccdc);
+ z-index:0;
+}
+.programme-row{
+ position:relative;
+ border-bottom:1px solid #e4ebf1;
+}
+.programme-row:last-child{border-bottom:0}
+.programme-row .num{
+ position:relative;z-index:1;
+ background:linear-gradient(145deg,#f8fbfd,#dce9f3);
+ border:1px solid #a9c2d6;
+ box-shadow:0 2px 5px rgba(24,57,86,.08);
+}
+.elegant-footer{
+ position:relative;
+ margin-top:25px;
+ padding:36px 16px 22px;
+}
+.elegant-footer:before{
+ content:"";
+ display:block;width:min(360px,70%);height:1px;margin:0 auto 23px;
+ background:linear-gradient(90deg,transparent,#9eb6c9,#c6a86a,#9eb6c9,transparent);
+}
+.footer-ornament{
+ letter-spacing:5px;
+ text-shadow:0 1px 0 #fff;
+}
+.footer-school{
+ display:inline-block;
+ padding:8px 18px;
+ border-top:1px solid #a9c2d6;
+ border-bottom:1px solid #a9c2d6;
+}
+.decor{
+ filter:drop-shadow(0 5px 5px rgba(23,61,98,.18));
+}
+@media(max-width:540px){
+ .hero:after{height:10px}
+ .invite-label:before{left:8px}.invite-label:after{right:8px}
+}
+
+</style>
+</head>
+<body>
+<main class="wrap">
+ <div class="topline">JEMPUTAN RASMI · 2026</div>
+
+ <section id="intro">
+  <div class="intro-inner">
+   <div class="kicker">PPKI SMK CHERAS PERDANA</div>
+   <h2 class="serif" style="font-size:clamp(28px,7vw,39px);margin:13px 0 8px">Dengan penuh kesyukuran,<br>anda dijemput hadir</h2>
+   <p class="subtitle">Satu jemputan istimewa buat anda</p>
+   <div class="envelope-wrap">
+    <div class="envelope" id="envelope">
+     <div class="env-back"></div>
+     <div class="letter"><small>JEMPUTAN RASMI</small><b>Majlis Sambutan</b><small>HARI LAHIR & JAMUAN AKHIR TAHUN 2026</small></div>
+     <div class="env-front"></div><div class="env-flap"></div><div class="seal">✦</div>
+    </div>
+   </div>
+   <button class="open-btn" id="openBtn">BUKA JEMPUTAN</button>
+   <p class="smallcaps" style="margin-top:15px">WHITE & DENIM · ELEGANT EDITION</p>
+  </div>
+ </section>
+
+ <section id="invitation">
+  <section class="card hero">
+   <div class="decor d1">🎈</div><div class="decor d2">🎀</div><div class="decor d3">🎁</div><div class="decor d4">🎂</div>
+   <div class="logo-row">
+    <div class="logo-placeholder">SMK<br>CP</div>
+    <div class="school-ribbon">✦ PPKI SMK CHERAS PERDANA ✦</div>
+    <div class="logo-placeholder">25<br>✨</div>
+   </div>
+   <div class="invite-label">Jemputan Rasmi</div>
+   <p class="honour">Dengan segala hormatnya,<br>Tuan/Puan<br>dijemput hadir ke</p>
+   <div class="event-title">Majlis Sambutan<strong>Hari Lahir &</strong></div>
+   <div class="event-banner">Jamuan Akhir Tahun 2026</div>
+   <div class="theme-chip">✦ Tema: White & Denim ✦</div>
+   <div class="datebox">
+    <div class="date-row"><div class="date-label">▣ &nbsp; TARIKH</div><div class="date-value">27 November 2026</div></div>
+    <div class="date-row"><div class="date-label">▣ &nbsp; HARI</div><div class="date-value">Jumaat</div></div>
+    <div class="date-row"><div class="date-label">⌖ &nbsp; TEMPAT</div><div class="date-value">Bilik Berlian, PPKI</div></div>
+   </div>
+   <div class="goldline"></div>
+  </section>
+
+  <section class="card section">
+   <h2>Atur Cara Majlis</h2>
+   <div class="programme-date">27 NOVEMBER 2026 · JUMAAT</div>
+   <div class="goldline"></div>
+   <div class="programme">
+    <div class="programme-row"><div class="num">01</div><div class="programme-text">Ucapan aluan.</div></div>
+    <div class="programme-row"><div class="num">02</div><div class="programme-text">Bacaan doa daripada adik Mohamad Shafiq Bin Shahrizal.</div></div>
+    <div class="programme-row"><div class="num">03</div><div class="programme-text">Ucapan pengetua.</div></div>
+    <div class="programme-row"><div class="num">04</div><div class="programme-text">Penyampaian cenderahati kepada pentadbir.</div></div>
+    <div class="programme-row"><div class="num">05</div><div class="programme-text">Penyampaian hadiah birthday.</div></div>
+    <div class="programme-row"><div class="num">06</div><div class="programme-text">Jamuan makan.</div></div>
+    <div class="programme-row"><div class="num">07</div><div class="programme-text">Persembahan pertama.</div></div>
+    <div class="programme-row"><div class="num">08</div><div class="programme-text">Cabutan bertuah pusingan pertama.</div></div>
+    <div class="programme-row"><div class="num">09</div><div class="programme-text">Persembahan kedua.</div></div>
+    <div class="programme-row"><div class="num">10</div><div class="programme-text">Cabutan bertuah pusingan kedua.</div></div>
+    <div class="programme-row"><div class="num">11</div><div class="programme-text">Persembahan Cg. Emmy dan Cg. Shuhairi.</div></div>
+    <div class="programme-row"><div class="num">12</div><div class="programme-text">Cabutan bertuah pusingan ketiga.</div></div>
+    <div class="programme-row"><div class="num">13</div><div class="programme-text">Penyampaian hadiah kepada murid-murid persembahan, Cg. Shuhairi dan Cg. Emmy.</div></div>
+    <div class="programme-row"><div class="num">14</div><div class="programme-text">Penyampaian hadiah King N Queen.</div></div>
+   </div>
+   <p class="closing-note">Semoga kehadiran dan sokongan pihak pentadbir dapat menyerikan lagi majlis ini serta mencipta kenangan indah buat seluruh warga PPKI.</p>
+   <p class="thanks">TERIMA KASIH ATAS KESUDIAN HADIR</p>
+  </section>
+
+  <div class="footer elegant-footer">
+   <div class="footer-ornament">✦ ───────── ✦</div>
+   <p class="footer-message">Semoga kehadiran tuan/puan menyerikan majlis kami.</p>
+   <p class="footer-signoff">Dengan ingatan tulus ikhlas,</p>
+   <p class="footer-school">WARGA PPKI SMK CHERAS PERDANA</p>
+   <div class="footer-year">WHITE & DENIM · 2026</div>
+  </div>
+ </section>
+</main>
+
+<button class="music-btn" id="musicBtn" aria-label="Mainkan atau hentikan muzik">♫</button>
+<audio id="bgMusic" loop preload="none"><source src="lagu.mp3" type="audio/mpeg"></audio>
+<script>
+/* ===================== TETAPAN YANG PERLU DIUBAH =====================
+   Tukar nombor di bawah kepada nombor WhatsApp penganjur.
+   Format Malaysia: 60123456789 (tanpa +, ruang atau sengkang).
+   Letakkan fail audio instrumental yang dibenarkan bernama music.mp3
+   dalam folder yang sama dengan index.html.
+====================================================================== */
+const WHATSAPP_NUMBER = "60123456789"; // GANTI DENGAN NOMBOR SEBENAR
+const RSVP_TEXT = "Assalamualaikum. Saya ingin mengesahkan kehadiran ke Majlis Sambutan Hari Lahir & Jamuan Akhir Tahun PPKI SMK Cheras Perdana pada 27 November 2026. Nama: ";
+
+const intro = document.getElementById("intro");
+const invitation = document.getElementById("invitation");
+const envelope = document.getElementById("envelope");
+const openBtn = document.getElementById("openBtn");
+const music = document.getElementById("bgMusic");
+const musicBtn = document.getElementById("musicBtn");
+
+openBtn.addEventListener("click", () => {
+ envelope.classList.add("open");
+ openBtn.disabled = true;
+ openBtn.textContent = "JEMPUTAN DIBUKA...";
+ setTimeout(() => {
+  intro.style.display = "none";
+  invitation.classList.add("visible");
+  musicBtn.classList.add("show");
+  window.scrollTo({top:0,behavior:"smooth"});
+ }, 1050);
+ // Pelayar mudah alih mungkin menyekat autoplay. Tetamu boleh tekan butang ♫.
+ music.play().catch(() => {});
+});
+musicBtn.addEventListener("click", async () => {
+ if (music.paused) {
+  try { await music.play(); musicBtn.textContent = "♫"; }
+  catch(e) { alert("lagu.mp3"); }
+ } else {
+  music.pause(); musicBtn.textContent = "♪";
+ }
+});
+</script>
+</body>
+</html>
