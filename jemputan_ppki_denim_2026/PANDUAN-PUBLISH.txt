@@ -1,0 +1,46 @@
+KAD JEMPUTAN DIGITAL PPKI SMK CHERAS PERDANA — WHITE & DENIM 2026
+
+Kandungan website telah disusun berdasarkan dua poster rujukan:
+- Jemputan: 27 November 2026, Jumaat
+- Tempat: Bilik Berlian, PPKI
+- Tema: White & Denim
+- Atur cara: 14 perkara seperti dalam poster yang diberikan.
+
+FAIL:
+- index.html : website interaktif lengkap
+- assets/rujukan-kad-hadapan.png : poster rujukan asal
+- assets/rujukan-atur-cara.png : poster atur cara asal
+- music.mp3 : fail muzik instrumental (perlu ditambah sendiri jika mahu)
+
+PERKARA WAJIB DIKEMASKINI SEBELUM PUBLISH:
+1. Buka index.html dengan Notepad atau VS Code.
+2. Cari WHATSAPP_NUMBER = "60123456789"
+3. Gantikan nombor contoh itu dengan nombor WhatsApp penganjur sebenar, format Malaysia tanpa +, ruang atau sengkang. Contoh format: 60123456789.
+4. Simpan fail.
+5. Untuk muzik, letakkan fail instrumental yang anda ada kebenaran guna dengan nama tepat music.mp3 di sebelah index.html.
+   Nota: autoplay mungkin disekat oleh telefon/pelayar; tetamu boleh tekan butang muzik.
+
+PUBLISH PERCUMA MELALUI GITHUB PAGES:
+1. Log masuk/daftar di https://github.com
+2. Klik New repository.
+3. Nama: kad-jemputan-ppki-2026
+4. Pilih Public dan klik Create repository.
+5. Klik Add file > Upload files.
+6. Upload index.html. Jika ada, upload juga music.mp3.
+   Folder assets rujukan adalah untuk simpanan anda sahaja; website tidak memerlukannya.
+7. Klik Commit changes.
+8. Buka Settings > Pages.
+9. Di Build and deployment, pilih Deploy from a branch.
+10. Branch: main; folder: /(root); klik Save.
+11. Tunggu sehingga GitHub Pages beri URL. Bentuk URL biasanya:
+    https://NAMA-ANDA.github.io/kad-jemputan-ppki-2026/
+12. Uji pautan pada telefon dan kongsi melalui WhatsApp.
+
+NOTA:
+- - Pautan lokasi membuka carian Google Maps untuk SMK Cheras Perdana. Sahkan lokasi tepat Bilik Berlian sebelum berkongsi.
+- Tiada masa majlis dipaparkan kerana masa tidak dinyatakan dalam poster rujukan.
+- Ejaan dan turutan atur cara dikekalkan berdasarkan poster yang diberikan.
+
+KEMASKINI REKA BENTUK:
+- Pautan/ayat 'Sahkan kehadiran melalui WhatsApp' telah dibuang sepenuhnya.
+- Corak White & Denim diperkemaskan dengan tekstur denim halus, jahitan, bingkai dan hiasan minimal.
