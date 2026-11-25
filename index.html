@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#102f5c">
+<title>Jemputan Rasmi | PPKI SMK Cheras Perdana</title>
+<style>
+:root{--navy:#0d2d59;--blue:#174a83;--gold:#d6a43a;--paper:#fffdf9}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:radial-gradient(circle at top,#edf5ff,#dce8f4 60%,#f8f8f6);color:var(--navy)}
+button{font:inherit}.opening{min-height:100svh;display:grid;place-items:center;padding:28px 16px;background:linear-gradient(135deg,#eaf2fa,#fff 55%,#dce8f5);overflow:hidden;position:relative}.opening:before,.opening:after{content:"";position:absolute;width:60vw;height:60vw;border:18px solid rgba(16,54,100,.08);border-radius:50%;pointer-events:none}.opening:before{top:-42vw;left:-25vw}.opening:after{bottom:-45vw;right:-25vw}
+.envelope-wrap{width:min(470px,94vw);text-align:center;position:relative;z-index:1}.eyebrow{font-size:12px;letter-spacing:4px;font-weight:800;color:#44648c;margin:0 0 22px}.envelope{height:260px;position:relative;perspective:900px;filter:drop-shadow(0 18px 20px #102f5c30);margin:0 auto 24px;max-width:430px}.env-back{position:absolute;inset:28px 0 0;background:linear-gradient(145deg,#0b2851,#1c548c);border:3px solid #dceaff;border-radius:12px}.env-paper{position:absolute;left:8%;right:8%;top:15px;height:210px;background:#fffdf9;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-direction:column;padding:18px;transition:transform 1s ease;box-shadow:0 4px 15px #001b3c25}.env-paper strong{font-family:Georgia,serif;font-size:clamp(22px,6vw,30px);font-style:italic;color:var(--navy)}.env-paper span{font-size:10px;letter-spacing:3px;margin-top:10px}.env-flap{position:absolute;left:0;right:0;top:28px;height:0;border-left:215px solid transparent;border-right:215px solid transparent;border-top:145px solid #2b6398;transform-origin:top;transition:transform .9s ease;z-index:4;filter:drop-shadow(0 3px 2px #001b3c45)}.env-front{position:absolute;inset:28px 0 0;background:linear-gradient(145deg,#174a7c,#0d2d59);clip-path:polygon(0 0,50% 57%,100% 0,100% 100%,0 100%);border-radius:0 0 12px 12px;z-index:3;border-bottom:3px solid #e9f2ff}.env-front:after{content:"";position:absolute;inset:12px;border:2px dashed #d9e9f8;border-radius:8px;opacity:.85}.seal{position:absolute;z-index:5;left:50%;top:58%;transform:translate(-50%,-50%);width:66px;height:66px;border-radius:50%;background:radial-gradient(circle,#fff 0 22%,#d8b45b 24% 34%,#123c70 37% 100%);border:3px solid #fff;box-shadow:0 3px 12px #001a3c55;color:white;display:grid;place-items:center;font-family:Georgia,serif;font-size:25px}.opening.opened .env-flap{transform:rotateX(180deg);z-index:1}.opening.opened .env-paper{transform:translateY(-125px);transition-delay:.25s}.opening.opened .seal{opacity:0;transition:.3s}.open-btn,.nav-btn,.music-btn{border:0;border-radius:999px;background:var(--navy);color:white;padding:14px 25px;font-weight:800;letter-spacing:.5px;cursor:pointer;box-shadow:0 8px 18px #102f5c25}.open-btn:hover,.nav-btn:hover,.music-btn:hover{background:#1d4d7e}.hint{font-size:13px;color:#526d8c;margin-top:14px}.invitation{display:none;padding:24px 14px 54px}.invitation.visible{display:block;animation:fadein .7s ease}@keyframes fadein{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}.top-actions{width:min(760px,100%);margin:0 auto 16px;display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}.music-btn{padding:10px 16px;font-size:13px}.music-note{font-size:12px;color:#5d718a}.cards{width:min(760px,100%);margin:auto;display:grid;gap:22px}.card-image{display:block;width:100%;height:auto;border-radius:8px;box-shadow:0 14px 38px #0b2c5630;background:white}.page-card[hidden]{display:none!important}.card-frame{padding:8px;background:#fff;border:1px solid #d8e2ef;border-radius:12px;box-shadow:0 4px 18px #123b6815}.nav-row{display:flex;justify-content:center;gap:12px;margin:22px auto 0;flex-wrap:wrap}.nav-btn{padding:12px 22px}.nav-btn.secondary{background:#fff;color:var(--navy);border:1px solid #b9c9dc}.footer{text-align:center;font-size:12px;color:#657b95;margin:25px 0 0}.noscript{padding:15px;text-align:center}
+@media(max-width:520px){.envelope{height:225px}.env-flap{border-left-width:46vw;border-right-width:46vw;border-top-width:125px}.env-paper{height:180px}.opening{padding:20px 12px}.invitation{padding:16px 8px 38px}.card-frame{padding:4px}.top-actions{justify-content:center}.music-note{width:100%;text-align:center}}
+@media print{.opening,.top-actions,.nav-row,.footer{display:none!important}.invitation{display:block!important;padding:0}.cards{width:100%;gap:8px}.card-frame{box-shadow:none;border:0;padding:0;break-after:page}.card-image{box-shadow:none}}
+</style>
+</head>
+<body>
+<section class="opening" id="opening">
+ <div class="envelope-wrap">
+  <p class="eyebrow">PPKI SMK CHERAS PERDANA</p>
+  <div class="envelope" aria-label="Sampul jemputan denim">
+   <div class="env-back"></div>
+   <div class="env-paper"><strong>Jemputan Rasmi</strong><span>MAJLIS SAMBUTAN HARI LAHIR &amp; JAMUAN AKHIR TAHUN 2026</span></div>
+   <div class="env-flap"></div><div class="env-front"></div><div class="seal">♥</div>
+  </div>
+  <button class="open-btn" id="openBtn">BUKA JEMPUTAN</button>
+  <p class="hint">Tekan untuk membuka jemputan rasmi</p>
+ </div>
+</section>
+<main class="invitation" id="invitation">
+ <div class="top-actions">
+  <span class="music-note">Jemputan rasmi • White &amp; Denim</span>
+  <button class="music-btn" id="musicBtn" type="button">♫ Mainkan muzik</button>
+ </div>
+ <div class="cards">
+  <div class="card-frame page-card" id="page1">
+   <img class="card-image" src="gambar1.jpeg" alt="Kad jemputan rasmi Majlis Sambutan Hari Lahir dan Jamuan Akhir Tahun 2026 PPKI SMK Cheras Perdana">
+  </div>
+  <div class="card-frame page-card" id="page2" hidden>
+   <img class="card-image" src="gambar2.jpeg" alt="Atur cara Majlis 27 November 2026, 14 aktiviti">
+  </div>
+ </div>
+ <div class="nav-row">
+  <button class="nav-btn secondary" id="prevPage" type="button" hidden>Kembali</button>
+  <button class="nav-btn" id="nextPage" type="button">Seterusnya →</button>
+ </div>
+ <p class="footer">PPKI SMK CHERAS PERDANA • 27 NOVEMBER 2026</p>
+</main>
+<audio id="bgMusic" src="lagu.mp3" preload="none" loop></audio>
+<script>
+const opening=document.getElementById('opening'),invitation=document.getElementById('invitation'),openBtn=document.getElementById('openBtn'),music=document.getElementById('bgMusic'),musicBtn=document.getElementById('musicBtn');
+openBtn.addEventListener('click',()=>{opening.classList.add('opened');openBtn.disabled=true;openBtn.textContent='JEMPUTAN DIBUKA';setTimeout(()=>{opening.style.display='none';invitation.classList.add('visible');window.scrollTo({top:0,behavior:'smooth'});music.play().then(()=>{musicBtn.textContent='♫ Hentikan muzik'}).catch(()=>{musicBtn.textContent='♫ Mainkan muzik'});},850)});
+musicBtn.addEventListener('click',()=>{if(music.paused){music.play().then(()=>musicBtn.textContent='♫ Hentikan muzik').catch(()=>musicBtn.textContent='Fail lagu.mp3 belum tersedia');}else{music.pause();musicBtn.textContent='♫ Mainkan muzik';}});
+const page1=document.getElementById('page1'),page2=document.getElementById('page2');
+const nextPage=document.getElementById('nextPage'),prevPage=document.getElementById('prevPage');
+nextPage.addEventListener('click',()=>{page1.hidden=true;page2.hidden=false;nextPage.hidden=true;prevPage.hidden=false;window.scrollTo({top:0,behavior:'smooth'});});
+prevPage.addEventListener('click',()=>{page2.hidden=true;page1.hidden=false;prevPage.hidden=true;nextPage.hidden=false;window.scrollTo({top:0,behavior:'smooth'});});
+</script>
+</body>
+</html>
